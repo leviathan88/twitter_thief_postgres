@@ -1,0 +1,31 @@
+<br/>
+<div class="row">
+    <div class="col-md-12">
+        
+         <div class="col-md-offset-2">
+        <h2 class="block">Welcome to <img ng-src="{{twitterImage}}" alt="Twitter"> <img/> <img ng-src="{{thiefImage}}" alt="Twitter"> <img/></h2>
+  </div>
+        <a class="btn btn-primary" href="/interests/new">Create new interest</a>
+        <h3 class="block">Interests</h3>
+        <table class="table table-hover">
+            <tr>
+                 <th>Username</th>
+                 <th>Hashtags</th>
+                 <th>User Mentions</th>
+                 <th colspan="4"></th>
+            </tr>
+            <tr ng-hide="interests.length" >
+                <td colspan="5">No interests found, Please create one.</td>
+            </tr>
+            <tr ng-show="interests.length" ng-repeat="interest in interests">
+                <td>{{interest.screen_name}}</td>
+                <td>{{interest.hashtags}}</td>
+                <td>{{interest.user_mentions}}</td>
+                <td>
+                    <a class="btn btn-info" href="interests/{{interest.id}}/edit">Edit</a> | <a class="btn btn-warning" href="" ng-click="deleteInterest(interest.id)">Remove</a> | 
+                    <a class="btn btn-success" href="interests/{{interest.id}}/tweets"> Show tweets</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ * {
+	margin: 0;
+}
+ 
+ div {
+  margin: 20px;
+}
+ 
+ul {
+  list-style-type: none;
+  width: 500px;
+}
+ 
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+ 
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+ 
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+ 
+li {
+  padding: 10px;
+  overflow: auto;
+}
+ 
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+html, body {
+	 height: 100%;
+}
+
+.container,
+.container-fluid {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
+}
+
+footer,
+.footer {
+	height: 4em;
+}
+
+.twitterer {
+      font: bold 12px/19px Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #333;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  white-space: nowrap;
+}
+
+.style-seven {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.style-three {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
